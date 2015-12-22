@@ -37,8 +37,8 @@ first_grungy = [
 "Lunk",
 "Stump",
 "Gristle",
-"Lump"
-"Crud",
+"Lump",
+"Crud"
 ]
 
 first_animal = [
@@ -77,25 +77,29 @@ last_a_prefixes = [
 ]
 
 last_a_manly = [
-"Ham",
 "Bulge",
 "Grunge",
 "Hard",
-"Rock",
 "Thunder",
 "Squat",
 "Dead",
 "Saw",
 "Thorn",
-"Speed"
+"Speed",
 "Fridge",
 "Huge",
 "Power",
 "Hunger",
 "Full",
+"War",
 "Thick"
 ]
 
+last_a_food =[
+"Ham",
+"Bacon",
+"Muffin"
+]
 last_a_animals = [
 "Shark",
 "Tiger",
@@ -104,8 +108,14 @@ last_a_animals = [
 "Kitty"
 ]
 
+last_a_body = [
+"Muff"
+]
+
 last_a_materials = [
+"Rock",
 "Iron",
+"Steel",
 "Oak",
 "Rust"
 ]
@@ -113,11 +123,14 @@ last_a_materials = [
 last_a_gator = [
 "Loose",
 "Kindly",
+"Active"
 ]
 
 last_a = []
 last_a += last_a_manly
+last_a += last_a_food
 last_a += last_a_animals
+last_a += last_a_body
 last_a += last_a_materials
 last_a += last_a_gator
 
@@ -131,6 +144,7 @@ last_b_manly = [
 "Flex",
 "Curl",
 "Blade",
+"Dodge",
 "Rod",
 "Quad",
 "Lift",
@@ -151,7 +165,8 @@ last_b_manly = [
 "Broth",
 "Fist",
 "Beef",
-"Point"
+"Point",
+"Machine"
 ]
 
 last_b_gator = [
@@ -161,11 +176,24 @@ last_b_gator = [
 
 last_b_food = [
 "Burger",
-"Cheese"
+"Cheese",
+"Quiche"
+]
+
+last_b_jobs = [
+"Monger",
+"Builder",
+"Buster",
+"Quilter",
+"Blaster",
+"Pilot",
+"Breaker",
+"Handler"
 ]
 
 last_b_body = [
 "Hump",
+"Muff",
 "Flap",
 "Loin",
 "Jaw",
@@ -179,6 +207,7 @@ last_b += last_b_manly
 last_b += last_b_gator
 last_b += last_b_food
 last_b += last_b_body
+last_b += last_b_jobs
 
 
 fullname = random.choice(first) + " " + random.choice(last_a) + random.choice(last_b)
