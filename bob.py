@@ -234,13 +234,23 @@ diceRoll = random.randrange(100);
 fullname = ""
 
 # add a title sometimes
-if diceRoll > 75 :
-    fullname += random.choice(titles) + " " 
+#if diceRoll > 75 :
+#    fullname += random.choice(titles) + " " 
 
 # sometimes two first names is funny
-if diceRoll > 80 : 
-    fullname += random.choice(first) 
+#if diceRoll > 80 : 
+#    fullname += random.choice(first) 
 
-fullname += random.choice(first) + " " + random.choice(last_a) + random.choice(last_b)
+# Add a random first name
+fullname += random.choice(first) + " " 
+
+# Sometimes prepend "mc" to the lastname 
+if diceRoll > 90 : 
+    fullname += "Mc" 
+
+fullname += random.choice(last_a) 
+fullanme += random.choice(last_b)
+
+# we have the full name, send it out
 keyboard.send_keys(fullname)
 
