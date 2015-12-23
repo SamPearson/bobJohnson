@@ -1,6 +1,17 @@
 # Written by Crunch ThunderChunk and Tex HamDelt
 import random
 
+titles = [
+"Captain",
+"Admiral",
+"Papa",
+"Commandant"
+]
+
+# Name arrays should follow this naming convention
+# first_(category name)
+# last_a_(category name)
+# last_b_(category name)
 
 first_manly = [
 "Flex",
@@ -45,13 +56,6 @@ first_animal = [
 "Wolf",
 ]
 
-first_titles = [
-"Captain",
-"Admiral",
-"Papa",
-"Commondant"
-]
-
 first_wimpy = [
 "Dunk",
 "Touch",
@@ -62,12 +66,23 @@ first_wimpy = [
 "Tinkles"
 ]
 
+# All categories are built, so we initialize the full
+# array of possible first names 
 first = []
+# and then append all of category arrays. In the end,
+# "first" contains all possible first names. 
 first += first_manly 
 first += first_grungy 
 first += first_animal
-first += first_titles
+#first += first_titles
 first += first_wimpy
+
+# categories can be removed by commenting them out
+#first += first_doesntWorkAndIsLame
+
+# any categories must be defined as arrays before
+# being appended to the main name array
+# (just copy/paste an existing one and change the name)
 
 
 last_a_prefixes = [
@@ -95,11 +110,6 @@ last_a_manly = [
 "Thick"
 ]
 
-last_a_food =[
-"Ham",
-"Bacon",
-"Muffin"
-]
 last_a_animals = [
 "Shark",
 "Tiger",
@@ -110,6 +120,15 @@ last_a_animals = [
 
 last_a_body = [
 "Muff"
+]
+
+last_a_deprecating = [
+"Oopsie"
+]
+last_a_food =[
+"Ham",
+"Bacon",
+"Muffin"
 ]
 
 last_a_materials = [
@@ -166,6 +185,7 @@ last_b_manly = [
 "Fist",
 "Beef",
 "Point",
+"Boom",
 "Machine"
 ]
 
@@ -209,7 +229,18 @@ last_b += last_b_food
 last_b += last_b_body
 last_b += last_b_jobs
 
+#Rolling a dice to use in percentage chances
+diceRoll = random.randrange(100);
+fullname = ""
 
-fullname = random.choice(first) + " " + random.choice(last_a) + random.choice(last_b)
+# add a title sometimes
+if diceRoll > 75 :
+    fullname += random.choice(titles) + " " 
+
+# sometimes two first names is funny
+if diceRoll > 80 : 
+    fullname += random.choice(first) 
+
+fullname += random.choice(first) + " " + random.choice(last_a) + random.choice(last_b)
 keyboard.send_keys(fullname)
 
