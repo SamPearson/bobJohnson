@@ -249,7 +249,7 @@ if diceRoll > 90 :
     fullname += "Mc" 
 
 fullname += random.choice(last_a) 
-fullanme += random.choice(last_b)
+fullname += random.choice(last_b)
 
 # we have the full name, send it out
 keyboard.send_keys(fullname)
