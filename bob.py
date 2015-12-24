@@ -86,7 +86,6 @@ first += first_wimpy
 
 
 last_a_prefixes = [
-"Mc",
 "Vander",
 "Von "
 ]
@@ -146,6 +145,7 @@ last_a_gator = [
 ]
 
 last_a = []
+last_a += last_a_prefixes
 last_a += last_a_manly
 last_a += last_a_food
 last_a += last_a_animals
