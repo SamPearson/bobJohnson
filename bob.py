@@ -1,17 +1,24 @@
 # Written by Crunch ThunderChunk and Tex HamDelt
 import random
 
-titles = [
-"Captain",
-"Admiral",
-"Papa",
-"Commandant"
-]
-
 # Name arrays should follow this naming convention
 # first_(category name)
 # last_a_(category name)
 # last_b_(category name)
+
+first_animal = [
+"Wolf",
+]
+
+
+first_grungy = [
+"Stump",
+"Lunk",
+"Stump",
+"Gristle",
+"Lump",
+"Crud"
+]
 
 first_manly = [
 "Flex",
@@ -43,19 +50,14 @@ first_manly = [
 "Flank"
 ]
 
-first_grungy = [
-"Stump",
-"Lunk",
-"Stump",
-"Gristle",
-"Lump",
-"Crud"
-]
 
-first_animal = [
-"Wolf",
+first_titles = [
+"Captain",
+"Admiral",
+"Papa",
+"Commandant",
+"Daddy"
 ]
-
 first_wimpy = [
 "Dunk",
 "Touch",
@@ -74,7 +76,7 @@ first = []
 first += first_manly 
 first += first_grungy 
 first += first_animal
-#first += first_titles
+first += first_titles
 first += first_wimpy
 
 # categories can be removed by commenting them out
@@ -93,6 +95,7 @@ last_a_prefixes = [
 last_a_manly = [
 "Bulge",
 "Grunge",
+"Grudge",
 "Hard",
 "Thunder",
 "Squat",
@@ -126,7 +129,6 @@ last_a_deprecating = [
 ]
 last_a_food =[
 "Ham",
-"Bacon",
 "Muffin"
 ]
 
@@ -149,6 +151,7 @@ last_a += last_a_prefixes
 last_a += last_a_manly
 last_a += last_a_food
 last_a += last_a_animals
+last_a += last_a_deprecating
 last_a += last_a_body
 last_a += last_a_materials
 last_a += last_a_gator
@@ -189,6 +192,12 @@ last_b_manly = [
 "Machine"
 ]
 
+last_b_weak = [
+"Doodle",
+"Flop",
+"Tard"
+]
+
 last_b_gator = [
 "Reply",
 "Emulsion",
@@ -227,15 +236,15 @@ last_b += last_b_manly
 last_b += last_b_gator
 last_b += last_b_food
 last_b += last_b_body
+last_b += last_b_weak
 last_b += last_b_jobs
+
+
+
+fullname = ""
 
 #Rolling a dice to use in percentage chances
 diceRoll = random.randrange(100);
-fullname = ""
-
-# add a title sometimes
-#if diceRoll > 75 :
-#    fullname += random.choice(titles) + " " 
 
 # sometimes two first names is funny
 #if diceRoll > 80 : 
@@ -246,7 +255,9 @@ fullname += random.choice(first) + " "
 
 # Sometimes prepend "mc" to the lastname 
 if diceRoll > 90 : 
-    fullname += "Mc" 
+    fullname += "Mc"
+elif diceRoll > 80 :
+    fullname += "O'" 
 
 fullname += random.choice(last_a) 
 fullname += random.choice(last_b)
