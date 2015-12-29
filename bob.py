@@ -86,6 +86,11 @@ first += first_wimpy
 # being appended to the main name array
 # (just copy/paste an existing one and change the name)
 
+titles = [
+"St. ",
+"Mc",
+"O'"
+]
 
 last_a_prefixes = [
 "Vander",
@@ -255,9 +260,7 @@ fullname += random.choice(first) + " "
 
 # Sometimes prepend "mc" to the lastname 
 if diceRoll > 90 : 
-    fullname += "Mc"
-elif diceRoll > 80 :
-    fullname += "O'" 
+    fullname += random.choice(titles)
 
 fullname += random.choice(last_a) 
 fullname += random.choice(last_b)
