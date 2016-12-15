@@ -26,6 +26,7 @@ first_manly = [
 "Hunk",
 "Butch",
 "Delt",
+"Dunk",
 "Bulk",
 "Tank",
 "Punt",
@@ -55,18 +56,9 @@ first_titles = [
 "Captain",
 "Admiral",
 "Papa",
-"Commandant",
-"Daddy"
+"Commandant"
 ]
-first_wimpy = [
-"Dunk",
-"Touch",
-"Flap",
-"Tiny",
-"Wink",
-"Tiddles",
-"Tinkles"
-]
+
 
 # All categories are built, so we initialize the full
 # array of possible first names 
@@ -77,7 +69,7 @@ first += first_manly
 first += first_grungy 
 first += first_animal
 first += first_titles
-first += first_wimpy
+
 
 # categories can be removed by commenting them out
 #first += first_doesntWorkAndIsLame
@@ -98,7 +90,6 @@ last_a_prefixes = [
 ]
 
 last_a_manly = [
-"Bulge",
 "Grunge",
 "Grudge",
 "Hard",
@@ -121,17 +112,9 @@ last_a_animals = [
 "Shark",
 "Tiger",
 "Lion",
-"Bear",
-"Kitty"
+"Bear"
 ]
 
-last_a_body = [
-"Muff"
-]
-
-last_a_deprecating = [
-"Oopsie"
-]
 last_a_food =[
 "Ham",
 "Muffin"
@@ -145,21 +128,12 @@ last_a_materials = [
 "Rust"
 ]
 
-last_a_gator = [
-"Loose",
-"Kindly",
-"Active"
-]
-
 last_a = []
 last_a += last_a_prefixes
 last_a += last_a_manly
 last_a += last_a_food
 last_a += last_a_animals
-last_a += last_a_deprecating
-last_a += last_a_body
 last_a += last_a_materials
-last_a += last_a_gator
 
 
 
@@ -172,18 +146,15 @@ last_b_manly = [
 "Curl",
 "Blade",
 "Dodge",
-"Rod",
 "Quad",
 "Lift",
 "Chunk",
-"Thrust",
 "Flash",
 "Swing",
 "Delt",
 "Large",
 "Chest",
 "Tooth",
-"Bone",
 "Pec",
 "Face",
 "Cheek",
@@ -200,13 +171,8 @@ last_b_manly = [
 last_b_weak = [
 "Doodle",
 "Flop",
-"Tard"
 ]
 
-last_b_gator = [
-"Reply",
-"Emulsion",
-]
 
 last_b_food = [
 "Burger",
@@ -225,22 +191,10 @@ last_b_jobs = [
 "Handler"
 ]
 
-last_b_body = [
-"Hump",
-"Muff",
-"Flap",
-"Loin",
-"Jaw",
-"Butt",
-"Turd",
-"Stag"
-]
 
 last_b = []
 last_b += last_b_manly
-last_b += last_b_gator
 last_b += last_b_food
-last_b += last_b_body
 last_b += last_b_weak
 last_b += last_b_jobs
 
