@@ -219,6 +219,9 @@ if diceRoll > 90 :
 fullname += random.choice(last_a) 
 fullname += random.choice(last_b)
 
-# we have the full name, send it out
-keyboard.send_keys(fullname)
+# we have the full name, send it with print
+print fullname
+
+# or like this for autokey
+#keyboard.send_keys(fullname)
 
